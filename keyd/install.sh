@@ -13,7 +13,7 @@ echo "Linking keyd config..."
 sudo mkdir -p /etc/keyd
 sudo ln -sfn "$KEYD_PATH/.config/keyd/default.conf" /etc/keyd/default.conf
 
-echo "Restarting keyd service..."
-sudo systemctl restart keyd
+echo "Enabling and starting keyd service..."
+sudo systemctl enable --now keyd
 
 echo "Done! keyd is installed and config is linked."
